@@ -13,3 +13,4 @@ A simple stopwatch application built using Python and Tkinter.
 
 ```bash
 python3 stopwatch.py
+# Stopwatch
