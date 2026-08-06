@@ -11,14 +11,14 @@ def update():
 
     if running:
         elapsed = time.time() - start_time
-
-        minutes = int(elapsed // 60)
+        hours = int(elapsed // 3600)
+        minutes = int((elapsed % 3600) // 60)
         seconds = int(elapsed % 60)
-        milliseconds = int((elapsed * 100) % 100)
+        
 
-        timer.config(text=f"{minutes:02}:{seconds:02}:{milliseconds:02}")
+        timer.config(text=f"{hours:02}:{minutes:02}:{seconds:02}")
 
-    root.after(10, update)
+    root.after(1000, update)
 
 
 def start():
